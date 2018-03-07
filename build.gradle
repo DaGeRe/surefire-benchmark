@@ -20,4 +20,5 @@ repositories {
 }
 dependencies {
     compile group: 'de.dagere.kopeme', name: 'kopeme-junit', version:'0.8'
+    compile group: 'de.dagere.kopeme', name: 'kopeme-junit3', version:'0.8'
 }
