@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'de.dagere'
+version = '0.0.1-SNAPSHOT'
+
+description = """surefire-benchmark"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+tasks.withType(JavaCompile) {
+	options.encoding = 'ISO-8859-1'
+}
+
+
+
+repositories {
+     mavenLocal()
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'de.dagere.kopeme', name: 'kopeme-junit', version:'0.8'
+}
