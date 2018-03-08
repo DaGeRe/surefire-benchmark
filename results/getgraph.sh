@@ -8,4 +8,6 @@ do
 	gradle3=$(awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }' $1/result_gradle_3_$size)
 	echo "$size;$mvn4;$mvn3;$gradle4;$gradle3" >> graph.csv
 done
+echo "set xlabel 'Printed Lines'
+echo "set ylabel 'Average Execution Time in {/Symbol m}s'"
 echo "plot 'graph.csv' u 1:2 w lines title 'Maven', 'graph.csv' u 1:4 w lines title 'Gradle'"
